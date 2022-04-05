@@ -1,0 +1,68 @@
+
+//Importing packages
+#include <stdio.h>
+#include <pthread.h>
+#include <string.h>
+#include <sys/stat.h>
+#include <time.h>
+#include <unistd.h>
+#include <ctype.h>
+#include <semaphore.h>
+#include <stdbool.h>
+#include <stdlib.h>
+
+
+
+const char *Sample = "sample4_in.txt"; //hard coding file name
+
+bool r = true; //running is true
+
+
+struct C {//customer
+
+
+	int *allo_r; // allocated resources
+    int *need_r; // need resources
+    int *max_r; //Max resources
+    int id_r; // id resources
+
+
+    bool finished = true;
+};
+
+
+struct C *c_resources;
+
+
+//integers
+int *a_resources; //aval resources
+int r_amount; //resource amou
+int c_amount;
+
+
+//voids
+void l_a_r(int c, char *args[]);
+void l_cus_res();
+void run_p();
+void req_res_comm(int cust_ind, int *req_res);
+void rel_res_comm(int cus_ind, int *rel_res);
+void run_com();
+void *run_com_func();
+void s_comm();
+
+//chars
+char **splt_str_ar(char *inp, char *del);
+char *scan_line();
+
+//integers
+int *spt_i_ar(char *inp, char *del);
+int len_i_ar(int *arr);
+int len_str_splt_arr(char *inp, char *de);
+int *array_addition(int *wrk, int *allo);
+
+//boolean
+bool need_work_comparison(int *nd, int *wrk);
+
+
+
+
