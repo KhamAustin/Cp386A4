@@ -160,6 +160,27 @@ void l_a_r(int c, char *a[]); //function load aval res
     r_amount = count-1; // minus 1
 }
 ///////////////////////////////////////////////////
+void run_comm()
+{
+
+    printf("Running\n");
+
+    for(int x = 0; x < c_amount; x++) {
+
+
+        pthread_t thread_id;
+        pthread_atr_t thread_at;
+
+        pthread_atr_init(&thread_at);
+        pthread_create(&thread_id, &thread_at,run_com_func, (void *) &x);
+
+        pthread_join(thread_id, NULL);
+    }
+
+    printf("finished running\n");
+    status_command();
+}
+//////////////////////////////////////////////////
 const char *Sample = "sample4_in.txt"; //hard coding file name
 
 bool r = true; //running is true
