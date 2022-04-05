@@ -178,7 +178,26 @@ void run_comm()
     }
 
     printf("finished running\n");
-    status_command();
+
+}
+//////////////////////////////////////////////////
+void *run_com_func(void *c_id)
+{
+
+
+    int c_i = *((int * ) c_id);
+
+
+    struct C cust = c_resources[c_i];
+
+    for(int x = 0; x < r_amount; x++) {
+
+        allo_r[x] = allo_r[x] + cust.allo_r[x];
+        cust.allo_r[x] = 0;
+        cust.need_r[x] = cust.max_r[x];
+    }
+
+    return NULL;
 }
 //////////////////////////////////////////////////
 const char *Sample = "sample4_in.txt"; //hard coding file name
