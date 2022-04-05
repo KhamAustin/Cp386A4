@@ -29,6 +29,84 @@ int main(int ac, char *a[] )// main
 }
 
 
+/////////////////////////////////////////////
+void run_p()
+
+{
+    while(r)
+
+    {
+        printf("Command ");
+
+
+        char *inp = s_l();
+                char **args = plt_str_ar(inp, "");
+
+
+        int a_len = len_str_splt_arr(inp, "");
+
+
+
+        if(strcmp(args[0], "rq") == 0) {
+
+
+            if(a_len == 2 + r_amount)
+            {
+
+                int c_ind = at(a[1]);
+                int r_r[r_amount];
+
+
+
+                for(int x = 0; x < r_amount; x++)
+                    r_r[i] = at(a[2 + i]);
+
+                req_res_comm(c_i, r_r);
+
+            }
+
+
+
+
+
+        }
+
+        else if(strcmp(args[0], "r l") ==0)
+        {
+
+        }
+            if(a_len == 2 +r_amount)
+            {
+
+                int c_i = at(a[1]);
+                int r_r[r_amount];
+
+                for(int z = 0; z < r_amount; i++)
+
+                    r_r[i] = at(a[2 + i]);
+
+                rel_res_comm(c_i, r_r);
+
+            }
+
+
+        }
+    else if(strcmp(a[0], "runn") == 0)
+    {
+
+    	run_com();
+
+
+        }
+
+    else if(strcmp(a[0], "statuss") == 0)
+    {
+            s_com();
+
+
+    }
+}
+
 //////////////////////////////////////////////
 void l_cus_res();
 
@@ -125,7 +203,7 @@ void s_comm();
 
 //chars
 char **splt_str_ar(char *inp, char *del);
-char *scan_line();
+char *s_l();
 
 //integers
 int *spt_i_ar(char *inp, char *del);
