@@ -12,12 +12,85 @@
 #include <stdlib.h>
 
 
+int main(int ac, char *a[] )// main
+{
+    if(ac == 1) {
+        printf("Need More INT\n");
+        return 1;
+    }
 
+    l_a_r(a_c, a); // calling
+    l_cus_res(r_amount); // calling
+
+    run_p(); // run
+
+
+    return 0;// return
+}
+
+
+//////////////////////////////////////////////
+void l_cus_res();
+
+{
+
+    char l[1000];
+    int x = 0;
+    FILE *Sample = fopen(Sample, "r");
+
+   .
+    while (fgets(l, sizeof(l), Sample) != NULL){
+    	c_amount=  c_amount + 1;
+    }
+
+
+    c_res = malloc(sizeof(struct C) *c_amount);
+    fseek(Sample, 0, SEEK_SET);
+
+
+
+    while (fgets(l, sizeof(l), Sample) != NULL)
+    {
+        struct C cust;
+
+
+        cust.max_r = spt_i_ar(l, ",");
+        cust.allo_r = malloc(sizeof(int) * r_amount);
+        cust.need_r = spt_i_ar(l, ",");
+        cust.fin = false;
+        cust.id_r = x;
+
+        c_res[i] = cus;
+        x++; // incrementing
+    }
+
+    fclose(Sample); //closing fle
+}//end
+////////////////////////////////////////////////
+void l_a_r(int c, char *a[]); //function load aval res
+{
+	a_resources = (int *)malloc((count - 1) * sizeof(int));
+
+    for (int i = 1; i < count; i++){
+    	//travesring
+
+
+    	a_resources[i - 1] = at(a[i]);
+    }
+
+
+    r_amount = count-1; // minus 1
+}
+///////////////////////////////////////////////////
 const char *Sample = "sample4_in.txt"; //hard coding file name
 
 bool r = true; //running is true
 
 
+
+
+
+//////////////////////////////////////
 struct C {//customer
 
 
@@ -27,7 +100,7 @@ struct C {//customer
     int id_r; // id resources
 
 
-    bool finished = true;
+    bool fin = true;
 };
 
 
@@ -41,7 +114,7 @@ int c_amount;
 
 
 //voids
-void l_a_r(int c, char *args[]);
+void l_a_r(int c, char *a[]);
 void l_cus_res();
 void run_p();
 void req_res_comm(int cust_ind, int *req_res);
